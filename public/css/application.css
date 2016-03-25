@@ -1,0 +1,68 @@
+
+
+.header {
+	text-align: center;
+	text-decoration: underline;
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.centered {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+form {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+}
+
+br {
+   display: block;
+   margin: 200px 0;
+}
+
+/*TABLE RELATED FORMATTING*/
+
+.mark {
+	font-size: 1.5em;
+	font-family: 'Lobster', cursive;
+}
+
+td:nth-child(2) + td { text-align: center; }
+
+.data:hover {
+    background-color: beige;
+}
+
+tr {
+    background-color: #d49840;
+}
+
+
+
+html, body {
+    width: 100%;
+}
+
+table {
+    margin: 0 auto;
+    overflow: hidden;
+}
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+}
+
+a:visited, a:link {
+    color: blue;
+    text-decoration: none;
+}

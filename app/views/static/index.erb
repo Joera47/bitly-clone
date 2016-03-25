@@ -1,2 +1,35 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<div class="header">
+	<h1>Linker Shrinker!</h1>
+	<img src="http://s17.postimg.org/l2d0rfrfz/shiba.png"/>
+	<h2>Shrink your link!</h2>
+</div>
+
+<form action="/urls" method ="post">
+	Enter URL:
+	<input type ="text" name="long_url">
+	<input type ="submit" value="Submit">
+</form>
+
+<% unless @line1 == nil %>
+	<div class="centered">
+		<p> <%= @line1 %> </p>
+		<p></p>
+		<a href = <%= @url["short_link"] unless @url == nil %>> <%= @line2 %> </a>
+	</div>
+<% end %>
+
+<p> <br/> <br/> <p>
+
+<table class>
+	<thead> 
+	<tr> <th colspan="3"><span class="mark">List archive</span></th></tr>
+	<tr><th>Original Link</th> <th>Shrinked Link</th> <th>Clicked Link</th></tr> 
+	</thead>
+		<% Url.all.limit(20).each do |url| %>
+	    	<tr class ="data">
+				<td><p> <%=url.link%> </p></td>
+				<td><a href = <%= url.short_link %>> <%= "localhost:9393/" + url.short_link %> </a></td>
+				<td><p> <%=url.clickcount%> </p></td>
+	    	</tr>
+	    <% end %>
+</table>

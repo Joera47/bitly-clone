@@ -120,7 +120,8 @@ namespace :db do
 
 	desc "Populate the database with dummy data by running db/seeds.rb"
 	task :seed do
-		require APP_ROOT.join('db', 'seeds.rb')
+		require APP_ROOT.join('db', 'seed.rb')
+	#UrlsImporter.import
 	end
 
 	desc "Returns the current schema version number"
