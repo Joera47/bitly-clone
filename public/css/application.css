@@ -1,5 +1,3 @@
-
-
 .header {
 	text-align: center;
 	text-decoration: underline;
@@ -46,8 +44,6 @@ td:nth-child(2) + td { text-align: center; }
 tr {
     background-color: #d49840;
 }
-
-
 
 html, body {
     width: 100%;
