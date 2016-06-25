@@ -1,25 +1,27 @@
-get '/' do		
-	@line1, @line2 = "", ""
+get '/' do
+	@line1, @line2 = "", ""		# Default values
 	erb :"static/index"
 end
 
 post '/urls' do
-	@url = Url.find_by link: params[:long_url]
-	redirect '/' if params[:long_url].empty?	
-	unless Url.validate(params[:long_url])
+	@url = Url.find_by(link: params[:long_url])
+
+	redirect '/' if params[:long_url].empty?	# No Link Provided
+
+	unless Url.validate(params[:long_url])		# Invalid Link
 		@line1 = "Error. Please provide a valid link"
 		erb :"static/index"
-	else
-		@url = Url.shorten(params[:long_url]) if @url == nil
-		@line1 = "Original link: #{@url["link"]}"
-		@line2 = "Shrinked link: localhost:9393/#{@url["short_link"]}"
+		
+	else										# Valid Link
+		@url = Url.shorten(params[:long_url])
+		@line1 = "Original link: #{@url.link} "
+		@line2 = "Shrinked link: #{request.base_url}/#{@url.short_link}"
 		erb :"static/index"
 	end
 end
 
-get '/:short' do
-	@url = Url.find_by short_link: params[:short]
-	p @url
-	@url.count
-	redirect to "#{@url[:link]}"
+get '/:short' do	# Click on shortened link
+	@url = Url.find_by(short_link: params[:short])
+	@url.up_count
+	redirect to "#{@url.link}"
 end
