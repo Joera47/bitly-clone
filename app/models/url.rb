@@ -1,7 +1,7 @@
 class Url < ActiveRecord::Base
 	validates :link, format: {with: URI.regexp}
 	
-	def self.shorten(details)
+	def self.shorten(details)	
 		attributes = {}
 		check = false
 		list = Url.all
