@@ -1,5 +1,5 @@
 .container_logo {
-    width: 250px;
+    width: 400px;
     /*border: dashed blue 1px;*/
 }
 
@@ -8,19 +8,20 @@
       max-width: 100%;
 }
 
+@font-face {
+  font-family: 'Ford script';
+  src: url('http://www.fontsaddict.com/fontface/ford-script.ttf');
 }
 
-
-.header {
-	text-align: center;
-	text-decoration: underline;
-	font-family: 'Dancing Script', cursive;
-	text-align: center;
-	font-size: 2.5em;
-}
-
-h1 {
+.tagline p {
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    color: #1a75ff;
     font-size: 2em;
+}
+
+#double {
+    font-size:1.5em;
 }
 
 .centered {
@@ -60,6 +61,7 @@ tr {
 
 html, body {
     width: 100%;
+    
 }
 
 table {

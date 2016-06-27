@@ -1,5 +1,5 @@
 get '/' do
-	@line1, @line2, @line3 = "", "", ""	# Default values
+	@line1, @line2 = "", ""	# Default values
 	erb :"static/index"
 end
 
@@ -10,18 +10,10 @@ post '/urls' do
 
 	unless Url.validate(params[:long_url])		# Invalid Link
 		@line1 = "Error. Please provide a valid link"
-		erb :"static/index"
-		
+		erb :"static/index"	
 	else										# Valid Link
-		time_start = Time.now
-		@url = Url.shorten(params[:long_url])
-		time_end = Time.now
-		@benchmark = time_end - time_start
-		p "Benchmark: " + @benchmark.to_s + " seconds"
-	
 		@line1 = "Original link: #{@url.link} "
 		@line2 = "Shrinked link: #{request.base_url}/#{@url.short_link}"
-		@line3 = "Benchmark: #{@benchmark.to_s} seconds"
 		erb :"static/index"
 	end
 end
