@@ -79,30 +79,34 @@
 
 <div class="br_header"></div>
 
-<p id="table_heading">-Most Visited Links-</p>
+<div id="table_container">
+	<p id="table_heading">-Most Visited Links-</p>
 
-<table>
-	<thead> 
-		<tr> 
-			<th colspan="3">
-				<div id="table_header">Link Archive</div>
-			</th>
-		</tr>
-		<tr>
-			<th>Original Link</th>
-			<th>Shrinked Link</th>
-			<th>Clicks</th>
-		</tr> 
-	</thead>
-		<% @base_url = request.base_url %>
-		<% Url.all.sort_by {|k, v| k[:link]}.reverse.sort_by {|k, v| k[:clickcount]}.reverse.first(20).each do |url| %>
-	    	<tr class="data">
-				<td><%=url.link%></td>
-				<td><a href = <%= url.short_link %>> <%= @base_url + "/" + url.short_link %> </a></td>
-				<td><%=url.clickcount%></td>
-	    	</tr>
-	    <% end %>
-</table>
+	<table>
+		<thead> 
+			<tr> 
+				<th colspan="3">
+					<div id="table_header">Link Archive</div>
+				</th>
+			</tr>
+			<tr>
+				<th>Original Link</th>
+				<th>Shrinked Link</th>
+				<th>Clicks</th>
+			</tr> 
+		</thead>
+			<% @base_url = request.base_url %>
+			<% Url.all.sort_by {|k, v| k[:link]}.reverse.sort_by {|k, v| k[:clickcount]}.reverse.first(20).each do |url| %>
+		    	<tr class="data">
+					<td><%=url.link%></td>
+					<td><a href = <%= url.short_link %>> <%= @base_url + "/" + url.short_link %> </a></td>
+					<td><%=url.clickcount%></td>
+		    	</tr>
+		    <% end %>
+	</table>
+</div>
+
+<div class="br_header"></div>
 
 <div id="Disclaimer">
 	<p>Disclaimer!<br><span id="disclaimer_content">This webapp & all related content are for demonstration purposes only.<br>This webapp is a clone of the popular webapp Bitly.<br>This app is not used for commercialization.<br>This webapp was developed by Joey Chan.</span></p>
