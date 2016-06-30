@@ -1,31 +1,58 @@
+<!-- Top Of Page -->
 <div class="header">
-		<div class="container_logo">
-			<div id="main_logo">
-				<a href="/"><img src="img/main_logo.png" /></a>
-			</div>
+	<!-- Logo -->
+	<div class="container_logo">
+		<div id="main_logo">
+			<a href="/"><img src="img/main_logo.png" /></a>
 		</div>
-		<div class="br_header"></div>
-		<div class="tagline">
-			<div id="tagline"><img src="img/tagline.png" /></div>
-			<div id="motto"><img src="img/motto.png" /></div>
-		</div>
+	</div>
 
-		<form action="/urls" method ="post">
-			<input type ="text" name="long_url">
-			<input type ="submit" value="Shrink It!">
+	<div class="br_header"></div>
 
-		</form>
+	<!-- Tagline & Motto -->
+	<div class="tagline">
+		<div id="tagline"><img src="img/tagline.png" /></div>
+		<div id="motto"><img src="img/motto.png" /></div>
+	</div>
+
+	<!-- Input Form -->
+	<form action="/urls" method ="post">
+		<input type ="text" name="long_url" placeholder="Shrink Your Link!">
+		<input type ="submit" value="Shrink It!">
+	</form>
 </div>
 
-
-
-
+<div class="br_header"></div>
 
 <container class="first">
-	<p>UNLEASH THE POWER OF THE LINK</p>
+	<strong><p>Unleash The Power Of The Link</p></strong>
 
 	<p>The link connects your marketing efforts to how and where your customers experience your brand. Are you getting the most out of it?<p>
 </container>
+
+<div class="br_header"></div>
+
+<div class="floats">
+	<div class="float_1">
+		<div id="img_container" style="background-image:url(/img/link.png);"></div>
+		<p>Shorten</p>
+		<p>Links are long. Shorten and brand the links you share, and keep track of them as they travel across the internet.</p>
+	</div>
+
+	<div class="float_2">
+		<div id="img_container" style="background-image:url(/img/share.png);"></div>
+		<p>Share</p>
+		<p>Optimize your links across every device and marketing channel, using Bitly or one of our partner publishing platforms.</p>
+	</div>
+
+	<div class="float_3">
+		<div id="img_container" style="background-image:url(/img/measure.png);"></div>
+		<p>Measure</p>
+		<p>Track individual link analytics, gather audience intelligence and measure campaign performance in one location.</p>
+	</div>
+</div>
+
+<div class="br_header"></div>
 
 
 <% unless @line1 == nil %>
@@ -37,9 +64,11 @@
 	</div>
 <% end %>
 
+<div class="br_header"></div>
+
 <p> <br/> <br/> <p>
 
-<table class>
+<table>
 	<thead> 
 	<tr> <th colspan="3"><span class="mark">List archive</span></th></tr>
 	<tr><th>Original Link</th> <th>Shrinked Link</th> <th>Clicked Link</th></tr> 

@@ -8,7 +8,7 @@
 
 .header::after {   
     content: "";
-    background-image:url(/img/9.jpg);
+    background-image:url(/img/dark_background.jpg);
     background-size: 100% 100%;
     background-position:center;
     opacity: 0.7;
@@ -54,9 +54,9 @@
     max-width: 100%;
 }
 
-/* Forms */
-input:nth-child(2) {
-    width: 5%;
+/* Form */
+form {
+    text-align: center;
 }
 
 input[type=text] {
@@ -65,9 +65,11 @@ input[type=text] {
     margin: 20px 0px;
     box-sizing: border-box;
     border: 2px solid red;
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     background-color: white;
-    color: white;
+    color: black;
+    font-size: 18px;
     background-image: url('/img/shrink_it.jpg');
     background-size: 40px 40px;
     background-position: 0; 
@@ -79,58 +81,32 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    background-color: lightblue;
-    border: 3px solid #555;
+    background-color: white;
+    border: 3px solid red;
+    font-size: 18px;
     width: 50%;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #4CAF50;
-    border: none;
+    width: 10%;
+    background-color: red;
+    border: 2px solid red;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     color: white;
-    padding: 16px 32px;
+    font-size: 18px;
+    padding: 14px 0px;
+    margin: 20px 0px 0px -8px;
     text-decoration: none;
-    margin: 4px 2px;
     cursor: pointer;
 }
 
-/*#main {
-   position: fixed;
-}
-#main:after {
-    content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(/img/9.jpg); 
-    width: 100%;
-    height: 100%;
-    opacity : 0.2;
-    z-index: -1;
-}*/
-
-/*body {
-    background-image: url("/img/9.jpg");
-    background-repeat:no-repeat;
-    background-position:top center;
-    background-size: 100% 500px;
-    background
-}*/
-
-
-
-.tagline p {
-    text-align: center;
-    font-family: 'Satisfy', cursive;
-    color: #1a75ff;
-    font-size: 2em;
+input[type="submit"]:hover {
+    background-color: #e60000;
+    color: white;
 }
 
-#double {
-    font-size:1.5em;
-}
-
+/* Content */
 .first p:first-child {
     font-family: 'Satisfy', cursive;
     font-size: 2em;
@@ -143,18 +119,56 @@ input[type=button], input[type=submit], input[type=reset] {
     text-align: center;
 }
 
-
-.centered {
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    text-decoration: underline;
-    font-size: 2em;
+/* Floating Content */
+.floats {
+    width: 60%;
+    margin-left: 20%;
 }
 
-form {
+.floats div {
+    width: 33.3%;
+}
+
+#img_container {
+    width: 50%;
+    padding-bottom: 50%;   
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.float_1, .float_2, .float_3 {
+    float: left;
+}
+
+.floats p:nth-child(2) {
+    font-size: 2em;
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
     text-align: center;
-    font-family: 'Lobster', cursive;
-    font-size: 1.5em;
+}
+
+.floats p:nth-child(3) {
+    font-size: 1.25em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*Other stuff*/
+
+table {
+    clear: left;
 }
 
 br {
