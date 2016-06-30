@@ -106,6 +106,12 @@ input[type="submit"]:hover {
     color: white;
 }
 
+/* Results */
+.results {
+    clear: left;
+    text-align: center;
+}
+
 /* Content */
 .first p:first-child {
     font-family: 'Satisfy', cursive;
@@ -156,53 +162,99 @@ input[type="submit"]:hover {
     padding: 0px 10px 0px 10px;
 }
 
+/* Number Of Links Shortened */
+#blue_background {
+    clear: left;
+    background-color: #0e3042;
+    color: white;
+    padding-top: 1px;
+    margin-top: 30px;
+}
+
+#counters {
+    width: 400px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+#counter {
+    color: white;
+    text-align: center;
+    padding-top: 13px;
+    font-size: 40px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 75px;
+    background-size: contain;
+    display: inline-block;
+}
+
+#comma {
+    font-size: 40px;
+    display: inline-block;
+}
 
 
 
 
-
-
-
-
-
-/*Other stuff*/
+/* Table */
+#table_heading {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Satisfy', cursive; 
+}
 
 table {
-    clear: left;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid white;
+    background-color: #0e3042;
+    color: white;
 }
 
-br {
-   display: block;
-   margin: 200px 0;
+#table_header, thead {
+    font-family: 'Satisfy', cursive; 
+    font-size: 25px;
+    text-align: center;
 }
 
-/*TABLE RELATED FORMATTING*/
-
-.mark {
-	font-size: 1.5em;
-	font-family: 'Lobster', cursive;
+.data {
+    font-family: Arial;
+    font-size: 20px;
 }
 
-td:nth-child(2) + td { text-align: center; }
+td, th {
+    border: 1px solid white;
+    text-align: center;
+}
+
+table a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
 
 .data:hover {
-    background-color: beige;
+    background-color: white;
+    color: #0e3042;
 }
 
-tr {
-    background-color: #d49840;
+.data:hover a {
+    color: #0e3042;
 }
 
-table {
-    margin: 0 auto;
-    overflow: hidden;
-}
-td, th {
-    border: 1px solid #999;
-    padding: 0.5rem;
+/* Disclaimer & Footer */
+#disclaimer {
+    font-size: 0.75em;
 }
 
-a:visited, a:link {
-    color: blue;
-    text-decoration: none;
+#disclaimer_content {
+    font-size: 0.5em;
+    font-family: 'Roboto', sans-serif;
 }
+
+#footer_logo {
+    width: 300px;
+    margin: auto;
+}
+
