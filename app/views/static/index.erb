@@ -1,21 +1,32 @@
 <div class="header">
-	<div class="container_logo">
-		<div id="main_logo">
-			<a href="/"><img src="img/main_logo.png" /></a>
+		<div class="container_logo">
+			<div id="main_logo">
+				<a href="/"><img src="img/main_logo.png" /></a>
+			</div>
 		</div>
-	</div>
+		<div class="br_header"></div>
+		<div class="tagline">
+			<div id="tagline"><img src="img/tagline.png" /></div>
+			<div id="motto"><img src="img/motto.png" /></div>
+		</div>
+
+		<form action="/urls" method ="post">
+			<input type ="text" name="long_url">
+			<input type ="submit" value="Shrink It!">
+
+		</form>
 </div>
 
-<div class="tagline">
-	<p><strong id="double">Linker Shrinker! Shrink Your Link!</strong>
-	<br>Shorter, more efficient links.</p>
-</div>
 
-<form action="/urls" method ="post">
-	Enter URL:
-	<input type ="text" name="long_url">
-	<input type ="submit" value="Submit">
-</form>
+
+
+
+<container class="first">
+	<p>UNLEASH THE POWER OF THE LINK</p>
+
+	<p>The link connects your marketing efforts to how and where your customers experience your brand. Are you getting the most out of it?<p>
+</container>
+
 
 <% unless @line1 == nil %>
 	<div class="centered">
