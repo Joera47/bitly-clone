@@ -65,40 +65,42 @@
 	<% @all_links = Url.all.count %>
 	
 	<div id="counters">
-		<div id="counter" style="background-image:url(/img/count_card.png);"><%= @all_links/1000000 %></div>
+		<div id="counter"><%= @all_links/1000000 %></div>
 		<p id="comma">,</p>
-		<div id="counter" style="background-image:url(/img/count_card.png);"><%= @all_links/100000%10 %></div>
-		<div id="counter" style="background-image:url(/img/count_card.png);"><%= @all_links/10000%10 %></div>
-		<div id="counter" style="background-image:url(/img/count_card.png);"><%= @all_links/1000%10 %></div>
+		<div id="counter"><%= @all_links/100000%10 %></div>
+		<div id="counter"><%= @all_links/10000%10 %></div>
+		<div id="counter"><%= @all_links/1000%10 %></div>
 		<p id="comma">,</p>
-		<div id="counter" style="background-image:url(/img/count_card.png);"><%= @all_links/100%10 %></div>
-		<div id="counter" style="background-image:url(/img/count_card.png);"><%= @all_links/10%10 %></div>
-		<div id="counter" style="background-image:url(/img/count_card.png);"><%= @all_links%10 %></div>
+		<div id="counter"><%= @all_links/100%10 %></div>
+		<div id="counter"><%= @all_links/10%10 %></div>
+		<div id="counter"><%= @all_links%10 %></div>
 	</div>
 </div>
 
 <div class="br_header"></div>
 
 <div id="table_container">
-	<p id="table_heading">-Most Visited Links-</p>
-
+	<p id="table_heading">-Top 10 Most Visited Links-</p>
 	<table>
-		<thead> 
-			<tr> 
-				<th colspan="3">
-					<div id="table_header">Link Archive</div>
-				</th>
-			</tr>
-			<tr>
+		<col width="auto" />
+		<col width="300px" />
+		<col width="80px" />
+		<tr> 
+			<th colspan="3">
+				<div id="table_header">Link Archive</div>
+			</th>
+		</tr>
+		<tr>
+			<div id="table_header_labels">
 				<th>Original Link</th>
 				<th>Shrinked Link</th>
 				<th>Clicks</th>
-			</tr> 
-		</thead>
+			</div>
+		</tr> 
 			<% @base_url = request.base_url %>
-			<% Url.all.sort_by {|k, v| k[:link]}.reverse.sort_by {|k, v| k[:clickcount]}.reverse.first(20).each do |url| %>
+			<% Url.all.sort_by {|k, v| k[:link]}.reverse.sort_by {|k, v| k[:clickcount]}.reverse.first(10).each do |url| %>
 		    	<tr class="data">
-					<td><%=url.link%></td>
+					<td style="width:20%;"><%=url.link%></td>
 					<td><a href = <%= url.short_link %>> <%= @base_url + "/" + url.short_link %> </a></td>
 					<td><%=url.clickcount%></td>
 		    	</tr>
@@ -117,3 +119,5 @@
 		<a href="/"><img src="img/main_logo.png" /></a>
 	</div>
 </div>
+
+<div class="br_header"></div>

@@ -192,6 +192,7 @@ input:focus ~ input[type="submit"] {
 #counter {
     color: white;
     text-align: center;
+    background-image:url('/img/count_card.png');
     padding-top: 13px;
     font-size: 40px;
     background-repeat: no-repeat;
@@ -208,25 +209,31 @@ input:focus ~ input[type="submit"] {
 
 /* Table */
 #table_container {
-    background-color: #f7fbfd;
+    background-color: #f7fbfd;z
     padding: 20px 0px 50px 0px;
 }
 
 #table_heading {
     font-size: 40px;
+    padding-top: 25px;
     text-align: center;
     font-family: 'Satisfy', cursive; 
 }
 
 table {
+    table-layout: fixed;
     width: 80%;
-    margin-left: 10%;
+    margin: 0 10% 0 10%;
     border: 1px solid white;
     background-color: #0e3042;
-    color: white;
+    color: #ff6600;
 }
 
-#table_header, thead {
+th:nth-child(3) {
+    width: 80%;
+}
+
+#table_header, th {
     font-family: 'Satisfy', cursive; 
     font-size: 25px;
     text-align: center;
@@ -240,10 +247,11 @@ table {
 td, th {
     border: 1px solid white;
     text-align: center;
+    word-wrap: break-word;
 }
 
 table a {
-    color: white;
+    color: #ff6600;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
@@ -267,13 +275,6 @@ table a {
     font-size: 0.5em;
     font-family: 'Roboto', sans-serif;
 }
-
-/*#footer_logo {
-    width: 100%;
-    background-color: #0e3042;
-    padding: 0px 30px 0px 30px;
-    margin: 0px -30px -30px -30px;
-}*/
 
 #footer_logo #main_logo {
     width: 200px;
